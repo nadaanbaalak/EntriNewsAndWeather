@@ -2,3 +2,13 @@
   font-size: 20px;
   color: white;
 }
+
+.SearchLanguage,
+.SearchBox {
+  text-align: center;
+}
+
+.SearchButton {
+  text-align: center;
+  margin-top: 15px;
+}
