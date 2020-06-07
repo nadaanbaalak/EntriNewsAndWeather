@@ -31,11 +31,6 @@ p {
   font-size: 25px;
 }
 
-h2,
-h3 {
-  font-family: "Fredoka One";
-}
-
 .weatherData {
   text-align: center;
 }
