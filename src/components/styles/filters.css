@@ -4,7 +4,8 @@
 }
 
 .SearchLanguage,
-.SearchBox {
+.SearchBox,
+.SearchCountry {
   text-align: center;
 }
 

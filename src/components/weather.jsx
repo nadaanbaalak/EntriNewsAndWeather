@@ -8,16 +8,27 @@ const Weather = (props) => {
   const { name: CityName, main, sys } = { ...data };
   const { temp, temp_max, temp_min } = { ...main };
   const { country } = { ...sys };
+
   const weatherData = (status) => {
     if (status === 200)
       return (
-        <Fragment>
-          <p className="data">{`${(temp - 273.15).toFixed(1)}° C`}</p>
-          <p className="data">{`Place : ${CityName}, ${country}`}</p>
-          <p className="data">{`Min temp : ${(temp_min - 273.15).toFixed(
-            1
-          )}° C | Max Temp : ${(temp_max - 273.15).toFixed(1)}° C`}</p>
-        </Fragment>
+        <div className="weatherData">
+          <p className="prop_value">{`${(temp - 273.15).toFixed(1)}° C`}</p>
+          <p className="spacing">
+            <span className="prop_name">{`Place : `}</span>
+            <span className="prop_value">{`${CityName}, ${country}`}</span>
+          </p>
+          <p className="spacing">
+            <span className="prop_name">{`Min temp : `}</span>
+            <span className="prop_value">
+              {`${(temp_min - 273.15).toFixed(1)}° C`}
+            </span>
+            <span className="prop_name">{`  Max Temp : `}</span>
+            <span className="prop_value">
+              {`${(temp_max - 273.15).toFixed(1)}° C`}
+            </span>
+          </p>
+        </div>
       );
     else
       return <p className="data">Currently unable to fetch Weather Info!!</p>;
@@ -30,7 +41,7 @@ const Weather = (props) => {
           <h1>
             Weather{" "}
             <span>
-              <Tooltip title="Refresh weather">
+              <Tooltip title="Refresh">
                 <Button
                   type="primary"
                   shape="circle"
