@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Divider } from "antd";
+import { List } from "antd";
 
 const NewsFeed = (props) => {
   return (

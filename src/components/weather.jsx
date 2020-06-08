@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Button, Tooltip, Divider } from "antd";
 import { ReloadOutlined } from "@ant-design/icons";
 
@@ -19,13 +19,11 @@ const Weather = (props) => {
             <span className="prop_value">{`${CityName}, ${country}`}</span>
           </p>
           <p className="spacing">
-            <span className="prop_name">{`Min temp : `}</span>
+            <span className="prop_name">{`Max/Min : `}</span>
             <span className="prop_value">
-              {`${(temp_min - 273.15).toFixed(1)}° C`}
-            </span>
-            <span className="prop_name">{`  Max Temp : `}</span>
-            <span className="prop_value">
-              {`${(temp_max - 273.15).toFixed(1)}° C`}
+              {`${(temp_min - 273.15).toFixed(1)}° C / ${(
+                temp_max - 273.15
+              ).toFixed(1)}° C`}
             </span>
           </p>
         </div>
